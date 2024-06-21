@@ -6,7 +6,7 @@
     tinymce.init({
         //selector: "#" + id,
         selector: '#iteminfo',
-        height: 200,
+        height: 300,
         //plugins: "textcolor link code lists table",
         plugins: "link code lists table",
         statusbar: false,
@@ -61,15 +61,35 @@
 </head>
 <body>
     <h1>tinymce self-hosted動作確認</h1>
-    <h2>商品情報/カスタム（メニュー最大表示）</h1>
+    <h2>パターン1（メニュー制御）</h2>
+    <ul>
+        <li>商品情報 商品情報/カスタム</li>
+        <li>カスタムテンプレート コンテンツ</li>
+    </ul>
     <form method="post">
-        <textarea id="iteminfo">Hello, World!</textarea>
+        <textarea id="iteminfo"></textarea>
     </form>
 
-    <h2>その他</h1>
-        <form method="post">
-            <textarea id="other_default">Hello, World!</textarea>
-        </form>
-    </body>
-</html>
+    <ul>
+        <li>カスタムテンプレート コンテンツ（初期値あり）</li>
+    </ul>
+    <form method="post">
+        <textarea id="iteminfo">
+            <table class="mce-item-table"><tbody><tr><th>サイズ</th><td>W×L×φ×D×H×Tmm</td></tr><tr><th>素材</th><td><br></td></tr><tr><th>仕上</th><td><br></td></tr><tr><th>付属品</th><td><br></td></tr></tbody></table>            
+        </textarea>
+    </form>
 
+    <h2>パターン2（メニュー多め）</h1>
+    <ul>
+        <li>商品情報 追加項目／オプション 注釈</li>
+        <li>商品情報 ステップオーダー 説明文</li>
+        <li>オプション 追加項目 注釈</li>
+        <li>フォーム 基本情報 注意書き</li>
+        <li>フォーム 個別属性 注意書き</li>
+        <li>ご注意・FAQ 本文/回答</li>
+    </ul>
+    <form method="post">
+        <textarea id="other_default"></textarea>
+    </form>
+</body>
+</html>
