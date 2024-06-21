@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="./tinymce/tinymce.min.js"></script>
+  <script type="text/javascript">
+    tinymce.init({
+        //selector: "#" + id,
+        selector: '#iteminfo',
+        height: 200,
+        //plugins: "textcolor link code lists table",
+        plugins: "link code lists table",
+        statusbar: false,
+        menubar: "tools",
+        toolbar: [
+            'forecolor bold underline strikethrough removeformat | bullist | numlist | link unlink'
+        ],
+        content_css: "/css/tedit_custom.css",
+        // textcolor_map: [
+        //     'A60A0E', 'Red',
+        //     '707070', 'Gray'
+        // ],
+        color_map: [
+            'FF0000', 'Red',
+            '808080', 'Gray',
+        ],
+        custom_colors: false,
+        promotion: false //Upgraseのボタン非表示
+    });
+    /*tinymce.init({
+        selector: '#mytextarea'
+    });*/
+  </script>
+  <script type="text/javascript">
+    tinymce.init({
+        //selector: "#" + id,
+        selector: '#other_default',
+        height: 300,
+        //plugins: "textcolor link code lists table",
+        plugins: "image link code lists hr",
+        statusbar: false,
+        menubar: "tools",
+        toolbar: [
+        "formatselect forecolor bold italic underline strikethrough removeformat hr | bullist numlist | alignleft aligncenter alignright alignjustify | outdent indent | link unlink | image"
+        ],
+        content_css: "/css/tedit_custom.css",
+        // textcolor_map: [
+        //     'A60A0E', 'Red',
+        //     '707070', 'Gray'
+        // ],
+        color_map: [
+            'FF0000', 'Red',
+            '808080', 'Gray',
+        ],
+        custom_colors: false,
+        promotion: false //Upgraseのボタン非表示
+    });
+    /*tinymce.init({
+        selector: '#mytextarea'
+    });*/
+  </script>
+</head>
+<body>
+    <h1>tinymce self-hosted動作確認</h1>
+    <h2>商品情報/カスタム（メニュー最大表示）</h1>
+    <form method="post">
+        <textarea id="iteminfo">Hello, World!</textarea>
+    </form>
+
+    <h2>その他</h1>
+        <form method="post">
+            <textarea id="other_default">Hello, World!</textarea>
+        </form>
+    </body>
+</html>
+
