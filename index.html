@@ -2,10 +2,12 @@
 <html>
 <head>
   <script src="./tinymce/tinymce.min.js"></script>
+  <script src="./tinymce/langs/ja.js"></script>
   <script type="text/javascript">
     tinymce.init({
         //selector: "#" + id,
         selector: '#iteminfo',
+        language: 'ja',
         height: 300,
         //plugins: "textcolor link code lists table",
         plugins: "link code lists table",
@@ -34,13 +36,15 @@
     tinymce.init({
         //selector: "#" + id,
         selector: '#other_default',
+        language: 'ja',
         height: 300,
         //plugins: "textcolor link code lists table",
         plugins: "image link code lists hr",
         statusbar: false,
         menubar: "tools",
+        // formatselectがblocksに変わっている？
         toolbar: [
-        "formatselect forecolor bold italic underline strikethrough removeformat hr | bullist numlist | alignleft aligncenter alignright alignjustify | outdent indent | link unlink | image"
+        "blocks forecolor bold italic underline strikethrough removeformat hr | bullist numlist | alignleft aligncenter alignright alignjustify | outdent indent | link unlink | image"
         ],
         content_css: "/css/tedit_custom.css",
         // textcolor_map: [
